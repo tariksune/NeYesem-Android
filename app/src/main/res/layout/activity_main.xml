@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout2"
@@ -7,78 +7,126 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     tools:context=".MainActivity"
+    android:orientation="vertical"
     tools:layout_editor_absoluteY="25dp">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="0.5">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_book"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.6">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="0.3">
+                <TextView
+                    android:id="@+id/yemekEkrani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="?attr/actionModeSplitBackground"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="serif" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="0.3">
+                <TextView
+                    android:id="@+id/icecekEkrani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/yemekEkrani"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="?attr/actionModeSplitBackground"
-        android:textSize="18sp"
-        android:visibility="visible"
-        app:fontFamily="serif"
-        app:layout_constraintBottom_toTopOf="@+id/degistirmeButonu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/icecekEkrani"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:gravity="center"
-        android:textColor="?attr/actionModeSplitBackground"
-        android:textSize="18sp"
-        android:visibility="visible"
-        app:fontFamily="serif"
-        app:layout_constraintBottom_toTopOf="@+id/degistirmeButonu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/yanUrunEkrani"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="?attr/actionModeSplitBackground"
-        android:textSize="18sp"
-        android:visibility="visible"
-        app:fontFamily="serif"
-        app:layout_constraintBottom_toTopOf="@+id/degistirmeButonu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yemekEkrani" />
-
-
-    <Button
-        android:id="@+id/degistirmeButonu"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
-        android:background="#c14e7e"
-        android:text="Menü Üret"
-        android:textColor="@android:color/background_light"
-        app:fontFamily="@font/armata"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/yemekEkrani"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                    android:gravity="center"
+                    android:textColor="?attr/actionModeSplitBackground"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="serif" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="0.3">
+                <TextView
+                    android:id="@+id/yanUrunEkrani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="?attr/actionModeSplitBackground"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="serif" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="0.5">
+                <Button
+                    android:id="@+id/degistirmeButonu"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c14e7e"
+                    android:text="Menü Üret"
+                    android:textColor="@android:color/background_light"
+                    app:fontFamily="@font/armata" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
